@@ -17,8 +17,8 @@ function get() {
 
   // URLを組み立てて、リクエストを準備する（まだリクエストは未送信）
 
-  const idEncoded = encodeURIComponent("978-4-0486-6452-3");  // URL用にエンコード
-  const url = `https://api.openbd.jp/v1/get?isbn=${idEncoded}&pretty`;  // テンプレートリテラルを使用（バッククォートで囲む）
+  const idEncoded = encodeURIComponent("280010");  // URL用にエンコード
+  const url = `http://weather.livedoor.com/forecast/webservice/json/v1?city=280010`;  // テンプレートリテラルを使用（バッククォートで囲む）
   request.open("GET", url);
 
   // サーバからレスポンスが返ってきた場合の処理を登録
@@ -59,8 +59,8 @@ function show(event) {
 
   // responseを処理する
   // 連想配列（オブジェクト）のキーを取り出す
-  console.log(response[0].summary.title);
-
+  console.log(response.title);
+  
 }
 
 // 3. ここまで
